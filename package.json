@@ -8,6 +8,10 @@
   },
   "author": "Wouter Lemaire",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lemaiwo/ui5-middleware-route-proxy.git"
+  },
   "dependencies": {
     "http-proxy": "^1.18.0"
   }
