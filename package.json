@@ -1,0 +1,14 @@
+{
+  "name": "ui5-middleware-route-proxy",
+  "version": "1.0.0",
+  "description": "UI5tooling middleware route proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wouter Lemaire",
+  "license": "MIT",
+  "dependencies": {
+    "http-proxy": "^1.18.0"
+  }
+}
