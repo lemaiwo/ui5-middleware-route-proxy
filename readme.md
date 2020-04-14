@@ -65,7 +65,7 @@ server:
         target: http(s)://host:port
 ```
 
-3. configure a in `.env` file with your username and password for the proxy:
+3. Add a `.env` file with your username and password for the proxy:
 
 ```yaml
 PROXY_USERNAME=<username>
