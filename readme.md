@@ -63,7 +63,11 @@ server:
       debug: true
       routeRootPath: 
         target: http(s)://host:port
-        auth:
-          user: Username
-          pass: Password!
+```
+
+3. configure a in `.env` file with your username and password for the proxy:
+
+```yaml
+PROXY_USERNAME=<username>
+PROXY_PASSWORD=<password>
 ```
