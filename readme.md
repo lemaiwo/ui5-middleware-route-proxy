@@ -18,6 +18,7 @@ npm install ui5-middleware-route-proxy --save-dev
     hostname of your backend server
   - auth: `object`
     authorization object with username and password
+    - fromEnv: `boolean` optional. If _true_ user and pass represents existing variables in _.env_ file for that specific target
     - user: `string`
     - pass: `string` 
   
@@ -30,6 +31,18 @@ Example:
           user: Username
           pass: Password!
 ```
+
+Example with user/pass in .env file:
+```yaml
+      debug: true
+      sap: 
+        target: http(s)://host:port
+        auth:
+          fromEnv: true
+          user: PROXY_USERNAME
+          pass: PROXY_PASSWORD
+```
+
 
 ## Usage
 
@@ -63,6 +76,10 @@ server:
       debug: true
       routeRootPath: 
         target: http(s)://host:port
+        auth:
+          fromEnv: true
+          user: PROXY_USERNAME
+          pass: PROXY_PASSWORD
 ```
 
 3. Add a `.env` file with your username and password for the proxy:
