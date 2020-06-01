@@ -16,20 +16,26 @@ npm install ui5-middleware-route-proxy --save-dev
   used to match and forward requests to your server
   - target: `string`
     hostname of your backend server
+    replacePath: `string` optional. If the request path needs to be modified by taking out the root directory uri
   - auth: `object`
     authorization object with username and password
     - fromEnv: `boolean` optional. If _true_ user and pass represents existing variables in _.env_ file for that specific target
     - user: `string`
     - pass: `string` 
+    - client: `string` optional. If the client is not the default client on the SAP system
+    
   
 Example:
 ```yml
       debug: true
       sap: 
         target: http(s)://host:port
+        replacePath: true
         auth:
           user: Username
           pass: Password!
+          client: 100
+          
 ```
 
 Example with user/pass in .env file:
