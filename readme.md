@@ -22,7 +22,7 @@ npm install ui5-middleware-route-proxy --save-dev
     - user: `string`
     - pass: `string` 
     - client: `string` optional. If the client is not the default client on the SAP system
-    - header: `string` optional. If given, the value is used as value for the `Authorization` header. `user` and `pass` values are not used in this case.
+    - header: `string` optional. Is used as value for the `Authorization` header if available. `user` and `pass` values are not used in this case.
   - changeOrigin: `boolean` optional. If provided, the value will be added to the [options of the http-proxy](https://www.npmjs.com/package/http-proxy#options).
   
 Each `boolean` or `string` field in a root path object can either represent the actual value or the name of a parameter in a .env file. 
