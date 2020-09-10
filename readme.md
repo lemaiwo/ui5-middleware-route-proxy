@@ -13,7 +13,7 @@ npm install ui5-middleware-route-proxy --save-dev
 - debug: `boolean`
   enable logging
 - root directory of the request uri: `object`
-  used to match and forward requests to your server
+  used to match and forward requests to your server. Needs to include the leading slash  character (`/`).
   - target: `string`
     hostname of your backend server
   - replacePath: `string` optional. If the request path needs to be modified by taking out the root directory uri
@@ -29,7 +29,7 @@ npm install ui5-middleware-route-proxy --save-dev
 Example:
 ```yml
       debug: true
-      sap: 
+      /sap: 
         target: http(s)://host:port
         replacePath: true
         auth:
@@ -41,7 +41,7 @@ Example:
 Example with user/pass in .env file:
 ```yaml
       debug: true
-      sap: 
+      /sap: 
         target: http(s)://host:port
         auth:
           fromEnv: true
@@ -52,7 +52,7 @@ Example with user/pass in .env file:
 Example with dedicated `Authorization` header in .env file:
 ```yaml
       debug: true
-      sap: 
+      /sap: 
         target: http(s)://host:port
         auth:
           fromEnv: true
@@ -90,7 +90,7 @@ server:
     afterMiddleware: compression
     configuration:
       debug: true
-      routeRootPath: 
+      /routeRootPath: 
         target: http(s)://host:port
         auth:
           fromEnv: true
