@@ -18,7 +18,7 @@ npm install ui5-middleware-route-proxy --save-dev
     hostname of your backend server
   - replacePath: `string` optional. If the request path needs to be modified by taking out the root directory uri
   - auth: `object`
-    authorization object with username and password
+    authorization object with username and password ( pass `false` if authorization is not required )
     - user: `string`
     - pass: `string` 
     - client: `string` optional. If the client is not the default client on the SAP system
@@ -36,7 +36,7 @@ Example:
         auth:
           user: Username
           pass: Password!
-          client: 100   
+          client: '100' 
 ```
 
 Example with target/user/pass in .env file:
@@ -47,6 +47,7 @@ Example with target/user/pass in .env file:
         auth:
           user: PROXY_USERNAME
           pass: PROXY_PASSWORD
+          client: PROXY_CLIENT
 ```
 
 Example with target and dedicated `Authorization` header in .env file:
